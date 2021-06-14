@@ -82,15 +82,9 @@ export default createStore({
       //   data: formInput,
       // };
       console.log(formInput);
-      axios.post(
-        "http://localhost:3000/api/employees",
-        formInput.profile,
-        formInput.personal_info,
-        formInput.contract,
-        (r) => {
-          console.log(r);
-        }
-      );
+      axios.post("http://localhost:3000/api/employees", formInput, (r) => {
+        console.log(r);
+      });
     },
   },
   modules: {},

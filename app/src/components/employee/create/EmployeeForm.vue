@@ -18,7 +18,10 @@
                 <!-- Employee ID -->
                 <div class="grid grid-cols-6 gap-6">
                   <div class="col-span-6 sm:col-span-3">
-                    <label for="emp_id" class="block text-sm font-medium text-gray-700">
+                    <label
+                      for="emp_id"
+                      class="block text-sm font-medium text-gray-700"
+                    >
                       Employee ID
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
@@ -33,7 +36,10 @@
                   </div>
                   <!-- User Name -->
                   <div class="col-span-6 sm:col-span-3">
-                    <label for="username" class="block text-sm font-medium text-gray-700">
+                    <label
+                      for="username"
+                      class="block text-sm font-medium text-gray-700"
+                    >
                       Username
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
@@ -49,13 +55,19 @@
                 </div>
                 <div class="grid grid-cols-6 gap-6">
                   <!-- Photo -->
-                  <div class="col-span-6 sm:col-span-3">
+                  <div>
                     <label class="block text-sm font-medium text-gray-700">
                       Photo
                     </label>
                     <div class="mt-1 flex items-center">
-                      <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                      <span
+                        class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100"
+                      >
+                        <svg
+                          class="h-full w-full text-gray-300"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path
                             d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
                           />
@@ -67,23 +79,6 @@
                       >
                         Change
                       </button>
-                    </div>
-                  </div>
-                  <!-- Status -->
-                  <div class="col-span-6 sm:col-span-3">
-                    <label class="block text-sm font-medium text-gray-700">
-                      Status
-                    </label>
-                    <div class="mt-1 flex items-center">
-                      <div class="mt-1 flex rounded-md shadow-sm">
-                        <input
-                          v-model="formInput.profile.status"
-                          type="text"
-                          name="status"
-                          id="status"
-                          class="mt-1 focus:ring-teal-500 focus:border-teal-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -119,7 +114,11 @@
                   <div class="grid grid-cols-6 gap-6">
                     <!-- First Name -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
+                      <label
+                        for="first_name"
+                        class="block text-sm font-medium text-gray-700"
+                        >First name</label
+                      >
                       <input
                         v-model="formInput.personal_info.first_name"
                         type="text"
@@ -130,7 +129,11 @@
                     </div>
                     <!-- Middle Name -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="middle_name" class="block text-sm font-medium text-gray-700">Middle name</label>
+                      <label
+                        for="middle_name"
+                        class="block text-sm font-medium text-gray-700"
+                        >Middle name</label
+                      >
                       <input
                         v-model="formInput.personal_info.middle_name"
                         type="text"
@@ -141,7 +144,11 @@
                     </div>
                     <!-- Last Name -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
+                      <label
+                        for="last_name"
+                        class="block text-sm font-medium text-gray-700"
+                        >Last name</label
+                      >
                       <input
                         v-model="formInput.personal_info.last_name"
                         type="text"
@@ -152,7 +159,11 @@
                     </div>
                     <!-- Age -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                      <label
+                        for="age"
+                        class="block text-sm font-medium text-gray-700"
+                        >Age</label
+                      >
                       <input
                         v-model="formInput.personal_info.age"
                         type="text"
@@ -163,7 +174,11 @@
                     </div>
                     <!-- Manager -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="manager" class="block text-sm font-medium text-gray-700">Manager</label>
+                      <label
+                        for="manager"
+                        class="block text-sm font-medium text-gray-700"
+                        >Manager</label
+                      >
                       <input
                         v-model="formInput.personal_info.manager"
                         type="text"
@@ -172,20 +187,13 @@
                         class="mt-1 focus:ring-teal-500 focus:border-teal-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
-                    <!-- Mobile -->
-                    <div class="col-span-6 sm:col-span-2">
-                      <label for="mobile" class="block text-sm font-medium text-gray-700">mobile</label>
-                      <input
-                        v-model="formInput.personal_info.mobile"
-                        type="text"
-                        name="mobile"
-                        id="mobile"
-                        class="mt-1 focus:ring-teal-500 focus:border-teal-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
                     <!-- Email Address -->
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="email_address" class="block text-sm font-medium text-gray-700">Email address</label>
+                      <label
+                        for="email_address"
+                        class="block text-sm font-medium text-gray-700"
+                        >Email address</label
+                      >
                       <input
                         v-model="formInput.personal_info.email_address"
                         type="text"
@@ -196,7 +204,11 @@
                     </div>
                     <!-- City Name -->
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                      <label
+                        for="city"
+                        class="block text-sm font-medium text-gray-700"
+                        >City</label
+                      >
                       <input
                         v-model="formInput.personal_info.city"
                         type="text"
@@ -207,7 +219,11 @@
                     </div>
                     <!-- Home Address -->
                     <div class="col-span-6">
-                      <label for="home_address" class="block text-sm font-medium text-gray-700">Home Address</label>
+                      <label
+                        for="home_address"
+                        class="block text-sm font-medium text-gray-700"
+                        >Home Address</label
+                      >
                       <input
                         v-model="formInput.personal_info.home_address"
                         type="text"
@@ -255,20 +271,35 @@
             <form name="contract">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
-                  <div class="relative grid grid-cols-6 gap-6 mt-4 ml-4 mb-6 mr-4">
+                  <div
+                    class="relative grid grid-cols-6 gap-6 mt-4 ml-4 mb-6 mr-4"
+                  >
                     <!-- Contract Types -->
                     <div class="col-span-6 sm:col-span-2">
-                      <label for="contract_type" class="block text-sm font-medium text-gray-700">Contract Types</label>
+                      <label
+                        for="contract_type"
+                        class="block text-sm font-medium text-gray-700"
+                        >Contract Types</label
+                      >
                     </div>
-                    <div class="absolute left-40 top--halfRem col-span-6 sm:col-span-2">
+                    <div
+                      class="absolute left-40 top--halfRem col-span-6 sm:col-span-2"
+                    >
                       <ListBox />
                     </div>
                   </div>
                   <div class="wrapper">
                     <div class="grid grid-cols-6 gap-6 m-4">
                       <!-- Start Date -->
-                      <div v-show="selectedContractType !== 2" class="col-span-6 sm:col-span-2">
-                        <label for="start_date" class="block text-sm font-medium text-gray-700">Start Date</label>
+                      <div
+                        v-show="selectedContractType !== 2"
+                        class="col-span-6 sm:col-span-2"
+                      >
+                        <label
+                          for="start_date"
+                          class="block text-sm font-medium text-gray-700"
+                          >Start Date</label
+                        >
                         <input
                           v-model="formInput.contract.start_date"
                           type="date"
@@ -278,8 +309,15 @@
                         />
                       </div>
                       <!-- End Date -->
-                      <div v-show="selectedContractType !== 2" class="col-span-6 sm:col-span-2">
-                        <label for="end_date" class="block text-sm font-medium text-gray-700">End Date</label>
+                      <div
+                        v-show="selectedContractType !== 2"
+                        class="col-span-6 sm:col-span-2"
+                      >
+                        <label
+                          for="end_date"
+                          class="block text-sm font-medium text-gray-700"
+                          >End Date</label
+                        >
                         <select
                           v-model="formInput.contract.end_date"
                           name="end_date"
@@ -302,7 +340,11 @@
                       </div>
                       <!-- Salary -->
                       <div class="col-span-6 sm:col-span-2">
-                        <label for="salary" class="block text-sm font-medium text-gray-700">Basic Salary</label>
+                        <label
+                          for="salary"
+                          class="block text-sm font-medium text-gray-700"
+                          >Basic Salary</label
+                        >
                         <input
                           v-model="formInput.contract.salary"
                           type="text"
@@ -312,8 +354,15 @@
                         />
                       </div>
                       <!-- Insurance -->
-                      <div v-show="selectedContractType !== 2" class="col-span-6 sm:col-span-2">
-                        <label for="insurance" class="block text-sm font-medium text-gray-700">Medical Insurance</label>
+                      <div
+                        v-show="selectedContractType !== 2"
+                        class="col-span-6 sm:col-span-2"
+                      >
+                        <label
+                          for="insurance"
+                          class="block text-sm font-medium text-gray-700"
+                          >Medical Insurance</label
+                        >
                         <input
                           v-model="formInput.contract.insurance"
                           type="text"
@@ -324,7 +373,11 @@
                       </div>
                       <!-- Position  -->
                       <div class="col-span-6 sm:col-span-2">
-                        <label for="position" class="block text-sm font-medium text-gray-700">Position</label>
+                        <label
+                          for="position"
+                          class="block text-sm font-medium text-gray-700"
+                          >Position</label
+                        >
                         <input
                           v-model="formInput.contract.position"
                           type="text"
@@ -334,8 +387,15 @@
                         />
                       </div>
                       <!-- Department -->
-                      <div v-show="selectedContractType !== 2" class="col-span-6 sm:col-span-2">
-                        <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+                      <div
+                        v-show="selectedContractType !== 2"
+                        class="col-span-6 sm:col-span-2"
+                      >
+                        <label
+                          for="department"
+                          class="block text-sm font-medium text-gray-700"
+                          >Department</label
+                        >
                         <input
                           v-model="formInput.contract.department"
                           type="text"
@@ -375,7 +435,12 @@
                               class="relative cursor-pointer bg-white rounded-md font-medium text-teal-600 hover:text-teal-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-teal-500"
                             >
                               <span>Upload a file</span>
-                              <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                              <input
+                                id="file-upload"
+                                name="file-upload"
+                                type="file"
+                                class="sr-only"
+                              />
                             </label>
                             <p class="pl-1">or drag and drop</p>
                           </div>
@@ -454,6 +519,8 @@ export default {
   methods: {
     submitNewEmployeeForm: function(e) {
       e.preventDefault();
+
+      console.log("starting...");
       this.$store.dispatch("createNewEmployee", this.formInput);
     },
   },

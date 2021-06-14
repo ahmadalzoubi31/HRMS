@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-import EmployeeForm from "@/components/employee/create/EmployeeForm.vue";
+import EmployeeForm from "../components/employee/create/EmployeeForm.vue";
 import NavBar from "@/components/common/NavBar.vue";
 
 export default {
