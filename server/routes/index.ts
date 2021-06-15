@@ -3,13 +3,14 @@ const router = express.Router();
 import employees from "../controllers/employee.controller";
 
 // Retrieve all employees
-router.get("/api/employees", (req, res) => {
+router.get("/api/employees", (req: object, res: object) => {
+  console.log("hit router");
   employees.getAll(req, res);
 });
 // Retrieve one employee by id
-// router.get("/api/employees/:id", (req, res) => {
-//   employees.getOne(req, res);
-// });
+router.get("/api/employees/:id", (req: object, res: object) => {
+  employees.getOne(req, res);
+});
 // // Create new employee
 // router.post("/api/employees", (req, res) => {
 //   employees.createOne(req, res);

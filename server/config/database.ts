@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'P@ssw0rd' // Use it when you can't login to the database
-
 const dbOptions: object = {
   host: process.env.MYSQL_HOST,
   port: process.env.MYSQL_PORT,

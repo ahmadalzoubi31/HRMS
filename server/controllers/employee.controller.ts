@@ -1,38 +1,28 @@
 import Employee from "../models/Employee";
-
 const employee = new Employee();
 
 // retrieve all employees
 const getAll = (req: any, res: any) => {
-  employee.findAll();
+  employee
+    .findAll()
+    .then((result) => res.status(200).send(result))
+    .catch((err) => {
+      // logging and web
+      res.status(500).send({ message: err.message || "Some error occurred while retrieving employee." });
+      console.log({ message: err.message || "Some error occurred while retrieving employee." });
+    });
 };
-// const getOne = (req, res) => {
-//   let employeeID = req.params.id;
-//   findOne({ _id: employeeID }, (err, doc) => {
-//     if (err) {
-//       // Logging
-//       console.log({
-//         message: err.message || "Some error occurred while retrieving employee.",
-//       });
-//       // Web
-//       res.status(500).send({
-//         message: err.message || "Some error occurred while retrieving employee.",
-//       });
-//     } else {
-//       if (!doc) {
-//         // Logging
-//         console.log({ message: `No employee found with id ${id}` });
-//         // Web
-//         res.status(500).send({
-//           message: `No employee found with id ${id}`,
-//         });
-//       } else {
-//         res.status(200).send(docs);
-//         console.log(docs);
-//       }
-//     }
-//   });
-// };
+const getOne = (req, res) => {
+  let employeeID = req.params.id;
+  employee
+    .findOne(employeeID)
+    .then((result) => res.status(200).send(result))
+    .catch((err) => {
+      // logging and web
+      res.status(500).send({ message: err.message || "Some error occurred while retrieving employee." });
+      console.log({ message: err.message || "Some error occurred while retrieving employee." });
+    });
+};
 // const createOne = (req, res) => {
 //   console.log("starting in controller");
 //   // Validate the content
@@ -114,7 +104,7 @@ const getAll = (req: any, res: any) => {
 
 export default {
   getAll,
-  // getOne,
+  getOne,
   // createOne,
   // updateOne,
   // deleteOne,
