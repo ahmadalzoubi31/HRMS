@@ -1,10 +1,8 @@
 import Employee from "../models/Employee";
-const employee = new Employee();
 
 // retrieve all employees
 const getAll = (req: any, res: any) => {
-  employee
-    .findAll()
+  Employee.findAll()
     .then((result) => res.status(200).send(result))
     .catch((err) => {
       // logging and web
@@ -12,10 +10,9 @@ const getAll = (req: any, res: any) => {
       console.log({ message: err.message || "Some error occurred while retrieving employee." });
     });
 };
-const getOne = (req, res) => {
+const getOne = (req: any, res: any) => {
   let employeeID = req.params.id;
-  employee
-    .findOne(employeeID)
+  Employee.findOne(employeeID)
     .then((result) => res.status(200).send(result))
     .catch((err) => {
       // logging and web
@@ -23,35 +20,27 @@ const getOne = (req, res) => {
       console.log({ message: err.message || "Some error occurred while retrieving employee." });
     });
 };
-// const createOne = (req, res) => {
-//   console.log("starting in controller");
-//   // Validate the content
-//   if (!req.body) {
-//     console.log({ message: "Content can not be empty!" });
-//     res.status(400).send({ message: "Content can not be empty!" });
-//     res.end();
-//     return;
-//   }
+const createOne = (req: any, res: any) => {
+  // Validate the content
+  if (!req.body) {
+    console.log({ message: "Content can not be empty!" });
+    res.status(400).send({ message: "Content can not be empty!" });
+    return;
+  }
 
-//   console.log({ "request body": req.body });
-//   let newEmployee = new Employee(req.body);
+  console.log({ "request body": req.body });
+  const employee = new Employee(req.body);
 
-//   create(newEmployee, (err, docs) => {
-//     if (err) {
-//       console.log({
-//         message: err.message || "Some error occurred while creating employee.",
-//       });
-//       res.status(500).send({
-//         message: err.message || "Some error occurred while creating employee.",
-//       });
-//       res.send();
-//       return;
-//     }
-//     console.log(docs);
-//     res.status(200).send(docs);
-//     res.end();
-//   });
-// };
+  employee
+    .create()
+    .then((result) => res.status(200).send(result))
+    .catch((err) => {
+      // logging and web
+      res.status(500).send({ message: err.message || "Some error occurred while creating a employee." });
+      console.log({ message: err.message || "Some error occurred while creating a employee." });
+    });
+};
+
 // const updateOne = (req, res) => {
 //   let employeeID = req.params.id;
 
@@ -105,7 +94,7 @@ const getOne = (req, res) => {
 export default {
   getAll,
   getOne,
-  // createOne,
+  createOne,
   // updateOne,
   // deleteOne,
 };
